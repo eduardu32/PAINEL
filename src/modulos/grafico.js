@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Chart } from 'react-google-charts';
 
 
 const ProductionChart = () => {
-    const [produção, setProdução] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:3000/data')
-        .then(response => response.json())
-        .then(data => {
-            setProdução(data);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    }, []);
+
 
  const data =[
   ["Dia", "Turno A", "Turno B", "Turno C", "Média Móvel"],
